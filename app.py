@@ -765,6 +765,8 @@ Son parcours dans l’auto-jeu en Go en passant par les méthodes Monte Carlo mo
         )
     )
 
+    st.markdown("[LinkedIn](https://www.linkedin.com/in/tristan-cazenave-11474815/)")
+
     st.markdown("---")
 
     # Narada
@@ -808,6 +810,8 @@ Il organise et supervise également les matchs SpinGPT vs. humains, sur des conf
         )
     )
 
+    st.markdown("[LinkedIn](https://www.linkedin.com/in/narada-maugin/)")
+
     st.markdown("---")
 
     # William
@@ -845,6 +849,8 @@ de suivre l’expérience facilement.
 """
         )
     )
+
+    st.markdown("[LinkedIn](https://www.linkedin.com/in/william-miserolle)")
 
     st.stop()
 
