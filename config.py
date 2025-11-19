@@ -2,18 +2,31 @@ import os
 BB = 100
 SB = 50
 INITIAL_STACK = 25 * BB
-MODEL_PATH = "model"  
-# LOG_DIR adapté pour Windows et Linux
+MODEL_PATH = "model"
+
+# LOG_DIR adapté pour Windows, Linux local et Streamlit Cloud
 USER = os.getenv("USER") or os.getenv("USERNAME") or "default"
 if os.name == "nt":  # Windows
-    LOG_DIR = os.path.join(os.getenv("APPDATA", "."), "spinGPT", "logs", "25BB")
-else:  # Linux/Mac
-    LOG_DIR = "/mnt/ssd/users/{user}/spinGPT/logs/25BB".format(user=USER)
+    base_logs = os.getenv("APPDATA", ".")
+else:  # Linux/Mac/Streamlit Cloud
+    # On privilégie un répertoire dans le HOME de l'utilisateur,
+    # qui est généralement toujours inscriptible (y compris sur Streamlit Cloud)
+    base_logs = os.path.join(os.path.expanduser("~"), ".spingpt")
+
+LOG_DIR = os.path.join(base_logs, "logs", "25BB")
+
+# Création robuste du répertoire de logs : si le chemin choisi n'est pas inscriptible,
+# on retombe sur un dossier local dans le répertoire courant.
+try:
+    os.makedirs(LOG_DIR, exist_ok=True)
+except PermissionError:
+    LOG_DIR = os.path.join(os.getcwd(), "logs", "25BB")
+    os.makedirs(LOG_DIR, exist_ok=True)
+
 LOG_FILE = os.path.join(LOG_DIR, "hands_log.jsonl")
 DECISIONS_LOG_FILE = os.path.join(LOG_DIR, "decisions_log.jsonl")
 DECISIONS_CHUNK_SIZE = 5000
 DECISIONS_META_FILE = os.path.join(LOG_DIR, "decisions_meta.json")
-os.makedirs(LOG_DIR, exist_ok=True)
 SUITS = {
     's': 'spades',
     'c': 'clubs',
