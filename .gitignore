@@ -1,0 +1,25 @@
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environnements virtuels
+.env
+.venv
+env/
+ENV/
+
+# Fichiers spécifiques IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Caches / logs
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+
