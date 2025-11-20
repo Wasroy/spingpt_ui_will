@@ -509,7 +509,7 @@ une base de données de vraies mains jouées en tournoi par Narada, puis nous l�
 Tout ce que nous faisons est pensé pour être documenté, reproductible et publiable.
 
 Nous ne connectons pas SpinGPT à des sites de jeu en argent réel et nous ne le vendons pas.  
-Notre objectif est plus simple – et, nous l’espérons, plus utile : étudier jusqu’où peut aller un grand modèle de langage construit à l’origine  
+Notre objectif est plus simple, et, nous l’espérons, plus utile : étudier jusqu’où peut aller un grand modèle de langage construit à l’origine  
 pour des tâches beaucoup moins spécifiques, mesurer honnêtement ses forces et ses limites, et partager ce chemin avec la communauté scientifique  
 et les joueurs curieux.
 
@@ -786,7 +786,7 @@ He provides SpinGPT’s dataset:
 In the project, Narada has two main roles:
 
 - **On the AI side**: designing the training pipeline, choosing models, running experiments against reference bots and defining statistical evaluation methods.  
-- **On the poker side**: bringing field intuition — which spots are truly critical, which lines are standard or marginal, and where an AI that *looks strong* may actually be following a fragile strategy.
+- **On the poker side**: bringing field intuition, identifying which spots are truly critical, which lines are standard or marginal, and where an AI that *looks strong* may actually be following a fragile strategy.
 
 He also organizes and supervises SpinGPT vs. human matches in Spin & Go heads‑up (1 vs 1) configurations, and makes sure they stay consistent with what we model.
 
@@ -803,7 +803,7 @@ Il fournit le dataset de SpinGPT :
 Dans le projet, Narada assure deux rôles principaux :
 
 - **Côté IA** : conception du pipeline d’entraînement, choix de modèles, expériences contre des bots de référence et méthodes d’évaluation statistique.  
-- **Côté poker** : intuition de terrain — quels spots sont vraiment critiques, quelles lignes sont standard ou marginales, et où une IA qui *semble forte* peut en réalité suivre une stratégie fragile.
+- **Côté poker** : intuition de terrain, identifiant quels spots sont vraiment critiques, quelles lignes sont standard ou marginales, et où une IA qui *semble forte* peut en réalité suivre une stratégie fragile.
 
 Il organise et supervise également les matchs SpinGPT vs. humains, sur des configurations de Spin & Go heads-up (1 vs 1) et s'assure de la cohérence avec ce que nous modélisons.
 """
@@ -816,7 +816,7 @@ Il organise et supervise également les matchs SpinGPT vs. humains, sur des conf
 
     # William
     st.image("assets/William_Miserolle_ProfilePicture.jpg", width=160)
-    st.header("William — " + L("Interface, Storytelling & Bridge to Students", "Interface, récit & lien avec les étudiants"))
+    st.header("William — " + L("Interface & Bridge to Students", "Interface & lien avec les étudiants"))
     st.markdown(
         L(
             """
